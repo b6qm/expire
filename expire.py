@@ -227,7 +227,7 @@ for P in file.readlines():
                     'ProductId': '1',
                     'Name': '',
                     'ProductPrice': '0',
-                    'TotalPrice': '21',
+                    'TotalPrice': '0.42',
                     'DiscountPrice': '0',
                     'Order': 0,
                     'Description': '',
