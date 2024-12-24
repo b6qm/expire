@@ -76,9 +76,6 @@ r = requests.session()
 r.follow_redirects = True
 r.verify = False
 
-token2 = '6913577462:AAELQiwLjFjeKZgR2DXu4KXMPOnDoPAYkGg'
-id2 = '5123986264'
-
 Z =  '\033[1;31m'
 F = '\033[2;32m'
 B = '\033[2;36m'
