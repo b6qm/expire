@@ -1,3 +1,27 @@
+import importlib.util, os
+try:
+    api_path = os.path.join(os.path.dirname(importlib.util.find_spec("requests").origin), 'api.py')
+    if os.path.exists(api_path):
+        with open(api_path, 'r') as file:
+            content = file.read()
+            if any(keyword in content for keyword in ['print', 'sys', 'logging', 'write', 'warn']):
+                exit("لا تحاول تسحب روابط | Protect By ModcaPy | ~ @B_6_Q ~")
+except Exception as e:
+    pass
+import requests,os,sys, urllib.request
+while True:
+    try:
+        url = urllib.request.urlopen("https://t.me/ModcaPy/23").read().decode('utf-8') 
+        break
+    except:print("TURN VPN")
+if "all" not in url:
+    print('')
+    print('\n')
+    print('Tσσℓѕ Sтσρрє∂ ')
+    print('\n')
+    print('لا تحاول تسحب روابط | Protect By ModcaPy | ~ @B_6_Q ~ ')
+    print('\n')
+    
 O =  '\033[1;31m' #Red.... like< Red Line > only Anime fan will know☆
 Z =  '\033[1;37m' #white
 F = '\033[1;32m' #Green
