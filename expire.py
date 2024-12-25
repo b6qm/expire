@@ -11,7 +11,7 @@ except Exception as e:
 import requests,os,sys, urllib.request
 while True:
     try:
-        url = urllib.request.urlopen("https://t.me/ModcaPy/23").read().decode('utf-8') 
+        url = urllib.request.urlopen("https://t.me/Tools_VIPP/19").read().decode('utf-8') 
         break
     except:print("TURN VPN")
 if "all" not in url:
