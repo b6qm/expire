@@ -160,7 +160,7 @@ for P in file.readlines():
         'authority': 'payments.braintree-api.com',
         'accept': '*/*',
         'accept-language': 'en-US,en;q=0.9,ar-EG;q=0.8,ar;q=0.7,fr-FR;q=0.6,fr;q=0.5',
-        'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MzU2NTg3NTIsImp0aSI6ImQ1ODE2NjJhLTFmNGUtNDljYi1iMjM4LWQ3MTY4MDdkYmUxZSIsInN1YiI6InBiZ2dxNTZyNzR5NjVmZ3giLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InBiZ2dxNTZyNzR5NjVmZ3giLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.vnxvIIMnOrScRL5B6E3fq62AQtgaaS870PYVA-Uwz7T1F-If13XXboQji5yTVwTGQZiqbZ56q9YI7jsRaJ09fg',
+        'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MzU4NTY2NjUsImp0aSI6Ijc1ZmQzOWMyLTIyOGUtNDlmMS1iOTFkLTg0YjBkZjNmMjU5ZCIsInN1YiI6InBiZ2dxNTZyNzR5NjVmZ3giLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InBiZ2dxNTZyNzR5NjVmZ3giLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.jFnz5BsKvdjlgPeThRxwzrMjKj4R9Ke2Mm4Kx98-4GG4tcm08IHvUSzRjU5D3aAKUXpl_8EaRL0CkDjqh7ggDQ',
         'braintree-version': '2018-05-10',
         'content-type': 'application/json',
         'origin': 'https://assets.braintreegateway.com',
@@ -178,7 +178,7 @@ for P in file.readlines():
         'clientSdkMetadata': {
             'source': 'client',
             'integration': 'custom',
-            'sessionId': 'c98ab89a-e87b-438e-883c-0a5046ea0b82',
+            'sessionId': '0abc94da-f92f-44c7-a073-cc81711db882',
         },
         'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
         'variables': {
@@ -198,7 +198,6 @@ for P in file.readlines():
     }
     
     response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
-    
     
     
     
